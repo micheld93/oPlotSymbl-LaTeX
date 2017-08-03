@@ -5,7 +5,7 @@ This package is named oPlotSymbl and it includes symbols, which are not easily a
 
 ## READ ME FIRST:
 
-It exists a manual for this package. Please read this first. To install this LaTeX package manually, follow these steps (all steps are for my preferred LaTeX distribution „Tex Live“!):
+It exists a manual for this package. Please read this first. It is available through CTAN and TexLive/MacteX and as far as I know it is shipped with MikTeX as well. To install this LaTeX package manually, follow these steps (all steps are for my preferred LaTeX distribution „Tex Live“!):
 
 ### For installing on Windows 7 (and above): 
 

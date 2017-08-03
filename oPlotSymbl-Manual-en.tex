@@ -1,4 +1,11 @@
-\documentclass[a4paper,parskip=half,bibtotoc,11pt]{scrartcl}
+\documentclass[
+	a4paper,
+	parskip=half,
+    pagesize=auto,      		% schreibt die Papiergröße korrekt ins Ausgabedokument
+    listof=totoc,   		% Verzeichnisse im Inhaltsverzeichnis
+    bibliography=totoc,
+	11pt
+]{scrartcl}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -19,13 +26,15 @@
 
 \usepackage[
 pdftitle={oPlotSymbl Package Introduction}, 
-pdfauthor={B. Michel Döhring, JLU Gießen},
+pdfauthor={B. Michel Döhring, JLU Giessen},
 colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=gray,bookmarks=true,
 bookmarksopenlevel=2]{hyperref}
 
 \usepackage{geometry}
-\geometry{total={210mm,297mm},
-left=30mm,right=20mm,top=20mm,bottom=20mm}
+\geometry{
+	nomarginpar,
+	left=30mm,right=20mm,top=20mm,bottom=20mm
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% colours for listings %%%%
@@ -86,19 +95,6 @@ E-Mail: \href{mailto:micheld.93@ gmail.com}{micheld.93@gmail.com}\\
 \makeatother
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% custom footers and headers
-\usepackage{fancyhdr,lastpage}
-\pagestyle{fancy}
-\lhead{}
-\chead{}
-\rhead{}
-\lfoot{}
-\cfoot{}
-\rfoot{Page \thepage\ /\ \pageref*{LastPage}}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-%
-
 %%%----------%%%----------%%%----------%%%----------%%%
 
 \begin{document}
@@ -107,7 +103,7 @@ E-Mail: \href{mailto:micheld.93@ gmail.com}{micheld.93@gmail.com}\\
 
 \author{B. Michel Döhring}
 
-\date{28/01/2017 (V1.2)}
+\date{03/08/2017 (V1.3)}
 
 \maketitle
 
@@ -151,6 +147,16 @@ I will collect all changes in this chapter, here.
     \item some people ask to change the name to oPlotSymbol, but I don't see any advantages in it. Sorry.
     \item share the links on CTAN and GitHub
     \item some changes on the code itself but NO, absolutely NO changes for the user 
+\end{itemize}
+
+
+\subsection{Version 1.3 (03.08.2017)}
+
+\begin{itemize}
+    \item minor changes: manual
+    \item bug fix for hexagofill
+    \item some changes on the code itself but NO, absolutely NO changes for the user 
+    \item I don't like version numbering like 1.2.3. Don't see any advantages in it for oplotsymbl
 \end{itemize}
 
 
@@ -221,6 +227,7 @@ pl & peak left \\ \hline
 \end{table}
 
 
+\newpage
 \subsection{Circle (here: Circlet)}
 
 Some other packages use \lstinline{\circle} or \lstinline{\circ} for circles, so I decided to use \lstinline{\circlet} instead of other cryptic abbreviations.    
@@ -315,7 +322,7 @@ Symbol            & Command  &  Description            \\ \hline \hline
 \end{table}
 
 
-
+\newpage
 \subsection{Hexagon (here: Hexago)}
 
 Well, we already know it. Hexagon is used in other packages, so there is a necessity to use different words. 
@@ -398,7 +405,7 @@ You can colour the symbols very easily like this:
 \pentagofillhl[opurple]	
 \end{lstlisting}
 
-There, you get a purple half filled pentagon. You can define own colours with the following command:
+There, you get a purple half filled pentagon \pentagofillhl[opurple]. You can define own colours with the following command:
 
 \begin{lstlisting}
 \definecolor{colour's name}{colour palette}{specific code}
