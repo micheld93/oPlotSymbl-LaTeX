@@ -38,7 +38,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage{tikz}
 % package information:
-\ProvidesPackage{oplotsymbl}[2017/08/03 Symbols, that are used in plots]
+\ProvidesPackage{oplotsymbl}[2017/08/04 Symbols, that are used in plots]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -808,13 +808,13 @@
 % Quadrat/Square with vertical line 
 \newcommand*\squadlinev[1][]{\tikz[#1]{ 
     \draw [line width=0.05em] (-0.34em,0.34em) rectangle (0.34em,-0.34em); 
-    \draw [line width=0.05em] (0.32em,0em) -- (-0.32em,0em);
+    \draw [line width=0.05em] (0em,-0.32em) -- (0em,0.32em);
 }}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Quadrat/Square with horizontal line 
 \newcommand*\squadlineh[1][]{\tikz[#1]{ 
     \draw [line width=0.05em] (-0.34em,0.34em) rectangle (0.34em,-0.34em); 
-    \draw [line width=0.05em] (0em,-0.32em) -- (0em,0.32em);
+    \draw [line width=0.05em] (0.32em,0em) -- (-0.32em,0em);
 }}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Quadrat/Square with horizontal and vertical line 
@@ -861,12 +861,12 @@
 %%%%%%%%%%%%%%%%%
 % Line vertical
 \newcommand*\linev[1][]{\tikz[#1]{ 
-\draw [line width=0.05em] (-0.34em,0em) -- (0.34em,0em);
+\draw [line width=0.05em] (0em,-0.34em) -- (0em,0.34em); 
 }}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Line horizontal
 \newcommand*\lineh[1][]{\tikz[#1]{ 
-\draw [line width=0.05em] (0em,-0.34em) -- (0em,0.34em); 
+\draw [line width=0.05em] (-0.34em,0em) -- (0.34em,0em);
 }}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Cross
@@ -978,4 +978,5 @@ Version history
 2016/02/12 - last symbols added
 2017/01/28 - minor changes on the manual, final release
 2017/08/03 - minor changes on the manual, bug fix for hexagofill
+2017/08/04 - major changes on the manual and package, bug fix for all XXline(v/h) symbols. Thanks to Rafael
 
